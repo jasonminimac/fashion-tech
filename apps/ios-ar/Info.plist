@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- App Identity -->
+    <key>CFBundleName</key>
+    <string>ios-ar</string>
+    <key>CFBundleDisplayName</key>
+    <string>Fashion AR</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.fashiontech.ios-ar</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1.0</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <!-- Privacy — Camera (required for ARKit body tracking) -->
+    <key>NSCameraUsageDescription</key>
+    <string>Camera access is required for AR body tracking and virtual try-on features. The camera feed is processed on-device and never stored or transmitted.</string>
+
+    <!-- Supported orientations (portrait only for AR session stability) -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- Deployment target -->
+    <key>MinimumOSVersion</key>
+    <string>14.0</string>
+
+    <!-- Required device capabilities — ARKit body tracking requires A14+ -->
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>arm64</string>
+        <string>arkit</string>
+    </array>
+
+    <!-- Scene configuration (UIKit lifecycle) -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+
+    <!-- Launch storyboard (or set to empty string if using pure code) -->
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <!-- Main storyboard — remove if using programmatic UI -->
+    <!-- <key>UIMainStoryboardFile</key> -->
+    <!-- <string>Main</string> -->
+
+</dict>
+</plist>

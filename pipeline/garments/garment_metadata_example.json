@@ -1,0 +1,90 @@
+{
+  "$schema": "https://fashion-tech.internal/schemas/garment-metadata/v1.0.0",
+  "id": "tshirt-basic-white-sprint1",
+  "name": "Classic White T-Shirt (Sprint 1 Prototype)",
+  "brand": "Fashion Tech Studio",
+  "category": "t-shirt",
+  "fabric_weight": {
+    "value_gsm": 150,
+    "material": "100% cotton",
+    "weave": "jersey"
+  },
+  "clo3d_file": "pipeline/garments/tshirt-basic-white-sprint1.zprj",
+  "obj_sequence_path": "assets/garments/tshirt-sprint1/",
+  "obj_frame_count": 30,
+  "obj_frame_pattern": "tshirt_frame_%03d.obj",
+  "sizes": [
+    {
+      "label": "XS",
+      "measurements_cm": {
+        "chest": 84,
+        "waist": 68,
+        "length": 66,
+        "sleeve": 20,
+        "shoulder": 38
+      }
+    },
+    {
+      "label": "S",
+      "measurements_cm": {
+        "chest": 90,
+        "waist": 74,
+        "length": 68,
+        "sleeve": 21,
+        "shoulder": 40
+      }
+    },
+    {
+      "label": "M",
+      "measurements_cm": {
+        "chest": 96,
+        "waist": 80,
+        "length": 70,
+        "sleeve": 22,
+        "shoulder": 42
+      }
+    },
+    {
+      "label": "L",
+      "measurements_cm": {
+        "chest": 104,
+        "waist": 88,
+        "length": 72,
+        "sleeve": 23,
+        "shoulder": 44
+      }
+    },
+    {
+      "label": "XL",
+      "measurements_cm": {
+        "chest": 112,
+        "waist": 96,
+        "length": 74,
+        "sleeve": 24,
+        "shoulder": 46
+      }
+    }
+  ],
+  "color": {
+    "name": "White",
+    "hex": "#FAFAFA",
+    "pantone": "Pantone 11-0601 TCX Bright White"
+  },
+  "season": "Core",
+  "retail_price": {
+    "amount": 29.99,
+    "currency": "GBP"
+  },
+  "sku": "FT-TSH-WHT-SPRINT1",
+  "thumbnail_url": "assets/textures/tshirt-basic-white-sprint1-thumb.jpg",
+  "tags": ["casual", "basics", "cotton", "unisex", "sprint1", "prototype"],
+  "simulation_meta": {
+    "tool": "Blender",
+    "tool_version": "4.x (Blender cloth sim fallback — CLO3D licence BLOCKER)",
+    "simulated_by": "fashion-garments",
+    "simulation_date": "2026-03-18",
+    "notes": "BLOCKER: CLO3D licence not confirmed. Placeholder .obj sequence generated via Blender cloth simulation script (blender_cloth_sim.py). Re-simulate in CLO3D once licence is acquired. See CLO3D-SETUP.md for exact project settings."
+  },
+  "created_at": "2026-03-18T11:29:00Z",
+  "updated_at": "2026-03-18T11:29:00Z"
+}

@@ -1,0 +1,22 @@
+{
+  "scan_id": "test_sprint1",
+  "landmarks": [
+    { "id": 0,  "name": "nose",             "x":  0.000, "y":  1.720, "z":  0.090 },
+    { "id": 11, "name": "left_shoulder",    "x":  0.190, "y":  1.460, "z":  0.000 },
+    { "id": 12, "name": "right_shoulder",   "x": -0.190, "y":  1.460, "z":  0.000 },
+    { "id": 13, "name": "left_elbow",       "x":  0.310, "y":  1.200, "z":  0.000 },
+    { "id": 14, "name": "right_elbow",      "x": -0.310, "y":  1.200, "z":  0.000 },
+    { "id": 15, "name": "left_wrist",       "x":  0.350, "y":  0.960, "z":  0.000 },
+    { "id": 16, "name": "right_wrist",      "x": -0.350, "y":  0.960, "z":  0.000 },
+    { "id": 23, "name": "left_hip",         "x":  0.110, "y":  1.020, "z":  0.000 },
+    { "id": 24, "name": "right_hip",        "x": -0.110, "y":  1.020, "z":  0.000 },
+    { "id": 25, "name": "left_knee",        "x":  0.110, "y":  0.540, "z":  0.020 },
+    { "id": 26, "name": "right_knee",       "x": -0.110, "y":  0.540, "z":  0.020 },
+    { "id": 27, "name": "left_ankle",       "x":  0.100, "y":  0.080, "z":  0.000 },
+    { "id": 28, "name": "right_ankle",      "x": -0.100, "y":  0.080, "z":  0.000 },
+    { "id": 29, "name": "left_heel",        "x":  0.100, "y":  0.030, "z": -0.050 },
+    { "id": 30, "name": "right_heel",       "x": -0.100, "y":  0.030, "z": -0.050 },
+    { "id": 31, "name": "left_foot_index",  "x":  0.100, "y":  0.030, "z":  0.130 },
+    { "id": 32, "name": "right_foot_index", "x": -0.100, "y":  0.030, "z":  0.130 }
+  ]
+}

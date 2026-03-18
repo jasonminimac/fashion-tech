@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fashion-tech.internal/schemas/garment-metadata/v1.0.0",
+  "title": "GarmentMetadata",
+  "description": "Schema for a single garment asset in the Fashion Tech virtual try-on platform",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "brand",
+    "category",
+    "fabric_weight",
+    "clo3d_file",
+    "obj_sequence_path",
+    "sizes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique garment identifier (slug format)",
+      "pattern": "^[a-z0-9][a-z0-9\\-_]*[a-z0-9]$",
+      "examples": ["tshirt-basic-white-001"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable garment display name",
+      "minLength": 1,
+      "maxLength": 128,
+      "examples": ["Classic White T-Shirt"]
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand or label name",
+      "minLength": 1,
+      "maxLength": 128,
+      "examples": ["Fashion Tech Studio"]
+    },
+    "category": {
+      "type": "string",
+      "description": "Garment category",
+      "enum": [
+        "t-shirt",
+        "shirt",
+        "blouse",
+        "jacket",
+        "coat",
+        "trousers",
+        "jeans",
+        "skirt",
+        "dress",
+        "shorts",
+        "knitwear",
+        "outerwear",
+        "activewear",
+        "accessories",
+        "other"
+      ]
+    },
+    "fabric_weight": {
+      "type": "object",
+      "description": "Fabric weight specification",
+      "required": ["value_gsm", "material"],
+      "properties": {
+        "value_gsm": {
+          "type": "number",
+          "description": "Fabric weight in grams per square metre (g/m²)",
+          "minimum": 10,
+          "maximum": 1000,
+          "examples": [150]
+        },
+        "material": {
+          "type": "string",
+          "description": "Primary fabric material",
+          "examples": ["100% cotton", "80% polyester 20% elastane"]
+        },
+        "weave": {
+          "type": "string",
+          "description": "Weave or construction type",
+          "enum": ["jersey", "woven", "twill", "denim", "fleece", "knit", "mesh", "other"],
+          "examples": ["jersey"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "clo3d_file": {
+      "type": "string",
+      "description": "Relative path to the source CLO3D project file (.zprj)",
+      "pattern": "\\.zprj$",
+      "examples": ["pipeline/garments/tshirt-basic-white-001.zprj"]
+    },
+    "obj_sequence_path": {
+      "type": "string",
+      "description": "Relative path to the directory containing the baked .obj frame sequence",
+      "examples": ["assets/garments/tshirt-sprint1/"]
+    },
+    "obj_frame_count": {
+      "type": "integer",
+      "description": "Number of frames in the .obj sequence",
+      "minimum": 1,
+      "examples": [30]
+    },
+    "obj_frame_pattern": {
+      "type": "string",
+      "description": "Printf-style filename pattern for the .obj sequence",
+      "examples": ["tshirt_frame_%03d.obj"]
+    },
+    "sizes": {
+      "type": "array",
+      "description": "Available sizes for this garment",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["label"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Size label (ISO or brand-specific)",
+            "examples": ["XS", "S", "M", "L", "XL", "XXL", "6", "8", "10"]
+          },
+          "iso_size": {
+            "type": "string",
+            "description": "ISO standard size code if available"
+          },
+          "measurements_cm": {
+            "type": "object",
+            "description": "Key garment measurements in centimetres",
+            "properties": {
+              "chest": { "type": "number" },
+              "waist": { "type": "number" },
+              "hip": { "type": "number" },
+              "length": { "type": "number" },
+              "sleeve": { "type": "number" },
+              "shoulder": { "type": "number" }
+            },
+            "additionalProperties": { "type": "number" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "color": {
+      "type": "object",
+      "description": "Primary colour information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "examples": ["White", "Navy Blue"]
+        },
+        "hex": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "examples": ["#FFFFFF"]
+        },
+        "pantone": {
+          "type": "string",
+          "examples": ["Pantone 11-0601 TCX"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "season": {
+      "type": "string",
+      "description": "Collection season",
+      "examples": ["SS2026", "AW2025", "Resort 2026", "Core"],
+      "pattern": "^[A-Za-z0-9 /\\-]+$"
+    },
+    "retail_price": {
+      "type": "object",
+      "description": "Retail pricing information",
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0,
+          "examples": [29.99]
+        },
+        "currency": {
+          "type": "string",
+          "description": "ISO 4217 currency code",
+          "pattern": "^[A-Z]{3}$",
+          "examples": ["GBP", "USD", "EUR"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock-keeping unit (retailer/brand internal reference)",
+      "examples": ["FT-TSH-WHT-001"]
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "URL or relative path to a flat-lay or packshot thumbnail image",
+      "examples": ["assets/textures/tshirt-basic-white-001-thumb.jpg"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Free-form tags for search and filtering",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "uniqueItems": true,
+      "examples": [["casual", "basics", "cotton", "unisex"]]
+    },
+    "simulation_meta": {
+      "type": "object",
+      "description": "Cloth simulation provenance metadata",
+      "properties": {
+        "tool": {
+          "type": "string",
+          "enum": ["CLO3D", "Blender", "Marvelous Designer", "other"],
+          "description": "Tool used to produce the .obj sequence"
+        },
+        "tool_version": { "type": "string" },
+        "simulated_by": { "type": "string" },
+        "simulation_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of record creation"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last record update"
+    }
+  },
+  "additionalProperties": false
+}
