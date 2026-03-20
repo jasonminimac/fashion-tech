@@ -1,0 +1,10 @@
+{
+  "scan_id": "scan_003_broad",
+  "rig_time_ms": 110.0,
+  "vert_count": 300,
+  "bone_count": 17,
+  "file_size_kb": 81.3,
+  "animation_fps": 30,
+  "walk_cycle_frames": 60,
+  "sla_pass": true
+}

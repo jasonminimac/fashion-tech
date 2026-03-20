@@ -1,0 +1,6 @@
+# Note: open3d requires Python 3.8-3.11; will be installed on target dev machine
+# numpy>=1.24.0 installed locally for compatibility testing
+numpy>=1.24.0
+scipy>=1.10.0
+trimesh>=3.20.0
+pytest>=7.0.0

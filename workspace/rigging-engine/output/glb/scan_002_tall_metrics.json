@@ -1,0 +1,10 @@
+{
+  "scan_id": "scan_002_tall",
+  "rig_time_ms": 110.9,
+  "vert_count": 300,
+  "bone_count": 17,
+  "file_size_kb": 80.9,
+  "animation_fps": 30,
+  "walk_cycle_frames": 60,
+  "sla_pass": true
+}

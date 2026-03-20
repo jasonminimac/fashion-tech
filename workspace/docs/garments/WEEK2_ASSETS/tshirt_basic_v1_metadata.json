@@ -1,0 +1,79 @@
+{
+  "id": "GARMENT-001",
+  "name": "Basic T-Shirt",
+  "category": "tops",
+  "subcategory": "t-shirt",
+  "size": "M",
+  "fabric": {
+    "type": "cotton",
+    "weight_gsm": 150,
+    "blend": "100% cotton",
+    "weave": "jersey",
+    "physics": {
+      "bending_stiffness": 0.15,
+      "stretch_stiffness": 0.85,
+      "shear_stiffness": 0.3,
+      "damping": 0.02,
+      "friction": 0.45,
+      "density_kg_m2": 0.15,
+      "thickness_mm": 0.6
+    }
+  },
+  "dimensions": {
+    "chest_cm": 96,
+    "length_cm": 70,
+    "sleeve_length_cm": 22,
+    "shoulder_width_cm": 44
+  },
+  "colors": [
+    "white",
+    "black",
+    "navy"
+  ],
+  "target_body": "average_male_M",
+  "sim_frames": 30,
+  "frame_rate": 24,
+  "created": "2026-03-25",
+  "version": "1.0",
+  "status": "proof_of_concept",
+  "phase": "phase_1_mvp",
+  "notes": "First garment asset. Blender cloth sim (CLO3D license pending).",
+  "assets": {
+    "obj_frames": [
+      "tshirt_basic_v1_frame001.obj",
+      "tshirt_basic_v1_frame002.obj",
+      "tshirt_basic_v1_frame003.obj",
+      "tshirt_basic_v1_frame004.obj",
+      "tshirt_basic_v1_frame005.obj",
+      "tshirt_basic_v1_frame006.obj",
+      "tshirt_basic_v1_frame007.obj",
+      "tshirt_basic_v1_frame008.obj",
+      "tshirt_basic_v1_frame009.obj",
+      "tshirt_basic_v1_frame010.obj",
+      "tshirt_basic_v1_frame011.obj",
+      "tshirt_basic_v1_frame012.obj",
+      "tshirt_basic_v1_frame013.obj",
+      "tshirt_basic_v1_frame014.obj",
+      "tshirt_basic_v1_frame015.obj",
+      "tshirt_basic_v1_frame016.obj",
+      "tshirt_basic_v1_frame017.obj",
+      "tshirt_basic_v1_frame018.obj",
+      "tshirt_basic_v1_frame019.obj",
+      "tshirt_basic_v1_frame020.obj",
+      "tshirt_basic_v1_frame021.obj",
+      "tshirt_basic_v1_frame022.obj",
+      "tshirt_basic_v1_frame023.obj",
+      "tshirt_basic_v1_frame024.obj",
+      "tshirt_basic_v1_frame025.obj",
+      "tshirt_basic_v1_frame026.obj",
+      "tshirt_basic_v1_frame027.obj",
+      "tshirt_basic_v1_frame028.obj",
+      "tshirt_basic_v1_frame029.obj",
+      "tshirt_basic_v1_frame030.obj"
+    ],
+    "mtl_file": "tshirt_basic_v1.mtl",
+    "zprj_source": "tshirt_basic_v1.zprj (pending CLO3D license)",
+    "total_frames": 30,
+    "frame_format": "OBJ"
+  }
+}

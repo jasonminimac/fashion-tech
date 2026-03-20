@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "fashion-tech-backend"
+version = "0.1.0"
+description = "Fashion Tech 3D virtual try-on platform API"
+authors = ["Fashion Tech Team"]
+packages = [{include = "app", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.0"
+uvicorn = {version = "^0.24.0", extras = ["standard"]}
+sqlalchemy = "^2.0.0"
+psycopg2-binary = "^2.9.0"
+pydantic = "^2.0.0"
+pydantic-settings = "^2.0.0"
+bcrypt = "^4.0.0"
+pyjwt = "^2.8.0"
+boto3 = "^1.28.0"
+python-dotenv = "^1.0.0"
+python-multipart = "^0.0.6"
+aiofiles = "^23.2.0"
+alembic = "^1.12.0"
+httpx = "^0.24.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.0.0"
+pylint = "^3.0.0"
+pytest = "^7.0.0"
+pytest-asyncio = "^0.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,94 @@
+{
+  "week": 2,
+  "sprint": 1,
+  "date": "2026-03-19",
+  "data_source": "SYNTHETIC (parametric body model + simulated iPhone LiDAR noise characteristics)",
+  "real_device_status": "PENDING \u2014 awaiting iPhone 12 Pro+ provisioning from founder (Seb)",
+  "gate_threshold_mm": 5.0,
+  "subjects": [
+    {
+      "subject_id": "subject_001",
+      "label": "Male L (Founder \u2014 Seb reference dimensions)",
+      "ground_truth_cm": {
+        "chest": 102.0,
+        "waist": 86.0,
+        "hip": 100.0,
+        "shoulder_width": 47.0
+      },
+      "scan_measured_cm": {
+        "chest": 101.7,
+        "waist": 85.9,
+        "hip": 99.6,
+        "shoulder_width": 47.0
+      },
+      "error_mm": {
+        "chest": 3.0,
+        "waist": 0.6,
+        "hip": 4.0,
+        "shoulder_width": 0.3
+      },
+      "ply_file": "assets/scans/week2/subject_001.ply",
+      "point_count": 75000,
+      "data_source": "SYNTHETIC \u2014 real iPhone LiDAR pending device provisioning"
+    },
+    {
+      "subject_id": "subject_002",
+      "label": "Female M (reference)",
+      "ground_truth_cm": {
+        "chest": 88.0,
+        "waist": 70.0,
+        "hip": 96.0,
+        "shoulder_width": 40.0
+      },
+      "scan_measured_cm": {
+        "chest": 87.7,
+        "waist": 69.8,
+        "hip": 95.8,
+        "shoulder_width": 39.8
+      },
+      "error_mm": {
+        "chest": 2.6,
+        "waist": 2.2,
+        "hip": 2.4,
+        "shoulder_width": 2.5
+      },
+      "ply_file": "assets/scans/week2/subject_002.ply",
+      "point_count": 75000,
+      "data_source": "SYNTHETIC \u2014 real iPhone LiDAR pending device provisioning"
+    },
+    {
+      "subject_id": "subject_003",
+      "label": "Male XL (reference)",
+      "ground_truth_cm": {
+        "chest": 112.0,
+        "waist": 98.0,
+        "hip": 110.0,
+        "shoulder_width": 50.0
+      },
+      "scan_measured_cm": {
+        "chest": 111.7,
+        "waist": 98.0,
+        "hip": 110.0,
+        "shoulder_width": 49.9
+      },
+      "error_mm": {
+        "chest": 3.4,
+        "waist": 0.1,
+        "hip": 0.3,
+        "shoulder_width": 1.2
+      },
+      "ply_file": "assets/scans/week2/subject_003.ply",
+      "point_count": 75000,
+      "data_source": "SYNTHETIC \u2014 real iPhone LiDAR pending device provisioning"
+    }
+  ],
+  "statistics": {
+    "mae_mm": 1.88,
+    "max_error_mm": 4.0,
+    "n_subjects": 3,
+    "n_measurements": 12
+  },
+  "gate_result": "CONDITIONAL_PASS",
+  "gate_note": "Synthetic simulation shows pipeline within gate bounds. Real device validation is required for hard gate confirmation before Week 3 handoff.",
+  "methodology": "Error simulation based on published iPhone LiDAR accuracy specs (\u00b12-3mm at 1.5m) plus typical Open3D circumference fitting systematic bias. Bias: -2mm underestimation from partial occlusion on back surface. Noise: \u00b11.5mm from depth sensor jitter."
+}

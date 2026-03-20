@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Blender
+*.blend1
+*.tmp
+*.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Data (large files)
+test_data/fixtures/*.fbx
+test_data/expected_output/*.blend
+archive/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
