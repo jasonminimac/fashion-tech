@@ -107,7 +107,7 @@ Absolute root: `/Users/Shared/.openclaw-shared/company/floors/fashion-tech/works
 
 ## Memory & Compaction
 
-Each agent logs continuously to: `agents/[role]/memory/logs/[MON-YYYY]/YYYY-MM-DD.md`
+Each agent logs continuously to: `agents/[role]/MIND/logs/[MON-YYYY]/YYYY-MM-DD.md`
 
 **Manual log entries:**
 ```
